@@ -22,7 +22,11 @@ for w in words:
 
 
 
+<<<<<<< HEAD
 reader = Reader(['bn'], verbose = False)
+=======
+reader = Reader(['bn'], verbose = False, recog_network = 'bn_license_tps', model_storage_directory = "./models/EasyOCR/models",user_network_directory="./models/EasyOCR/user_network", download_enabled = False)
+>>>>>>> 901bf4ae0cec451145005ac6e31b3f3423a4106a
 
 nums = set('০১২৩৪৫৬৭৮৯')
 
