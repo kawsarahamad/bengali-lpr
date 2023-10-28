@@ -1,0 +1,6 @@
+flask
+imutils==0.5.4
+gdown
+easyocr
+matplotlib
+ultralytics==8.0.173
