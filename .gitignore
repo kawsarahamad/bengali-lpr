@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 models*
-=======
-models/
->>>>>>> 901bf4ae0cec451145005ac6e31b3f3423a4106a
 __pycache__
 .ipynb_checkpoints
 bin
@@ -10,7 +6,5 @@ share
 lib
 lib64
 pyvenv.cfg
-<<<<<<< HEAD
 .venv
-=======
->>>>>>> 901bf4ae0cec451145005ac6e31b3f3423a4106a
+.idea
