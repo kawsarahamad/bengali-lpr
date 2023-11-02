@@ -1,4 +1,5 @@
 flask
+pillow==10.0.0
 imutils==0.5.4
 gdown
 easyocr

@@ -1,4 +1,4 @@
-from easyocr import Reader 
+from easyocr import Reader
 import cv2
 import difflib
 import matplotlib.pyplot as plt
@@ -22,11 +22,7 @@ for w in words:
 
 
 
-<<<<<<< HEAD
 reader = Reader(['bn'], verbose = False)
-=======
-reader = Reader(['bn'], verbose = False, recog_network = 'bn_license_tps', model_storage_directory = "./models/EasyOCR/models",user_network_directory="./models/EasyOCR/user_network", download_enabled = False)
->>>>>>> 901bf4ae0cec451145005ac6e31b3f3423a4106a
 
 nums = set('০১২৩৪৫৬৭৮৯')
 
@@ -34,8 +30,7 @@ def extract_license_text(path, reader = reader):
     img = path
     if isinstance(path, str):
         img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-            
-    
+
     result = reader.readtext(img, detail = False, paragraph = True)
     area = ""
     number = ""
@@ -50,7 +45,7 @@ def extract_license_text(path, reader = reader):
             number += c
         else:
             area += c
-    
+
     area = area[::-1]
     match = difflib.get_close_matches(area, dict, n = 1, cutoff = 0.5)
 
@@ -61,5 +56,5 @@ def extract_license_text(path, reader = reader):
 
     if number.find("-") == -1 and len(number) == 6:
         number = number[:2] + "-" + number[2:]
-    
+
     return area.strip(), number.strip()
