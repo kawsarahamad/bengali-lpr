@@ -40,7 +40,7 @@ def detect_license_plate(img):
 from extract_license_text import extract_license_text
 def detect_and_extract_lp_text(path, show_cropped_image = True):
     img = load_image(path)
-    
+
     detection_result = detect_license_plate(img)
     bbox = detection_result.boxes.data.numpy()
     xmin, ymin = bbox[0][:2].astype(int)
@@ -48,11 +48,7 @@ def detect_and_extract_lp_text(path, show_cropped_image = True):
     cropped_img = img[ymin:ymax, xmin:xmax]
     if show_cropped_image:
         show_image(cropped_img)
-        
+
     lp_text = extract_license_text(cv2.cvtColor(cropped_img, cv2.COLOR_BGR2GRAY))
-<<<<<<< HEAD
     print(lp_text)
     return lp_text
-=======
-    print(lp_text)
->>>>>>> 901bf4ae0cec451145005ac6e31b3f3423a4106a
