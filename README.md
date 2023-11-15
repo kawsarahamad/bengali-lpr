@@ -43,6 +43,12 @@ First create a virtual environment.
 python -m venv ./
 ```
 
+Then activate the virtual environment.
+
+```sh
+./Scripts/activate
+```
+
 Then install the dependencies.
 
 ```sh
