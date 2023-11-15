@@ -3,9 +3,8 @@ import cv2
 import difflib
 import matplotlib.pyplot as plt
 
-
-f = open('areas.txt', 'r')
-words = f.read().splitlines()
+with open('areas.txt', 'r', encoding='utf-8') as f:
+    words = f.read().splitlines()
 
 vclass = [
     'গ','হ','ল','ঘ','চ','ট','থ','এ',
