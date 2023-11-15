@@ -43,10 +43,16 @@ First create a virtual environment.
 python -m venv ./
 ```
 
+Activate the virtual environment
+
+```sh
+./Scripts/activate
+```
+
 Then install the dependencies.
 
 ```sh
-pip install -r requirements.txt
+pip install -r extract_license_text.txt
 ```
 
 Download and extract the model files
@@ -55,6 +61,12 @@ Download and extract the model files
 gdown 1ujSYC3tEC3VNoxqUIWO2PG7Lg5HAdYqn
 unzip models.zip
 ```
+
+For windows
+```sh
+tar -xf models.zip
+```
+
 
 Now test with the demo image.
 
