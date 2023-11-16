@@ -1,8 +1,12 @@
 from flask import Flask, flash, request, redirect, jsonify
 from werkzeug.utils import secure_filename
+from flask_cors import CORS
 import utils
 
 app = Flask(__name__)
+app.secret_key = 'python_app_secret_key'
+
+CORS(app)
 
 def get_extension(filename):
     return filename.rsplit('.', 1)[1].lower()
@@ -39,12 +43,10 @@ def process_image():
     file_path = save_file(img_file)
 
     area, number = utils.detect_and_extract_lp_text(file_path)
-    token = request.form.get('token')
 
     data = {
         'area': area,
         'number': number,
-        'token': token
     }
 
     response = jsonify(data)
