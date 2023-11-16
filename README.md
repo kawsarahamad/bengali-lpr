@@ -52,7 +52,7 @@ Activate the virtual environment
 Then install the dependencies.
 
 ```sh
-pip install -r extract_license_text.txt
+pip install -r necessary-requirements-to-run.txt
 ```
 
 Download and extract the model files
