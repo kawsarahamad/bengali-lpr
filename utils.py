@@ -12,8 +12,8 @@ def resize_image(img, max_width = 500):
     if img is None:
         print(f'resize_image(): img is null')
         return
-    if img.shape[0] > maxwidth:
-        img = imutils.resize(img, maxwidth)
+    if img.shape[0] > max_width:
+        img = imutils.resize(img, max_width)
     return img
 
 
